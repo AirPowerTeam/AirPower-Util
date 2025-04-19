@@ -41,7 +41,6 @@
   },
   "dependencies": {
     "@airpower/enum": "^0.0.3",
-    "@airpower/i18n": "^0.0.1",
     "@types/crypto-js": "^4.2.2",
     "crypto-js": "^4.2.0"
   },
@@ -52,6 +51,11 @@
     "typescript": "^5.8.2",
     "vite": "^6.2.0",
     "vite-plugin-dts": "^4.5.3"
+  },
+  "peerDependencies": {
+    "@airpower/enum": "^0.0.3",
+    "@types/crypto-js": "^4.2.2",
+    "crypto-js": "^4.2.0"
   },
   "publishConfig": {
     "access": "public"
