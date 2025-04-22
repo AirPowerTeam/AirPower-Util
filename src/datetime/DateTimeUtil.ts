@@ -1,3 +1,5 @@
+import { DateTimeFormatter } from './DateTimeFormatter'
+
 /**
  * # 时间日期时间戳格式化类
  *
@@ -125,6 +127,9 @@ export class DateTimeUtil {
   static formatFromDate(date: Date | string, formatString: string): string {
     if (typeof date !== 'object') {
       date = new Date(date)
+    }
+    if (formatString === DateTimeFormatter.TIMESTAMP.key) {
+      return date.valueOf().toString()
     }
     const dict: Record<string, string | number> = {
       YYYY: date.getFullYear(),

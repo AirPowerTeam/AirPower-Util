@@ -1,7 +1,7 @@
 {
   "name": "@airpower/util",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "AirPower-Util 是一个基于 TypeScript 的开发工具包, 内置了日常开发中的常用工具。",
   "author": {
     "name": "Hamm",
@@ -40,12 +40,12 @@
     "preview": "vite preview"
   },
   "peerDependencies": {
-    "@airpower/enum": "^0.0.5",
+    "@airpower/enum": "^0.0.9",
     "@types/crypto-js": "^4.2.2",
     "crypto-js": "^4.2.0"
   },
   "dependencies": {
-    "@airpower/enum": "^0.0.5",
+    "@airpower/enum": "^0.0.9",
     "@types/crypto-js": "^4.2.2",
     "crypto-js": "^4.2.0"
   },

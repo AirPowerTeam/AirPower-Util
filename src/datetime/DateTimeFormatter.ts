@@ -10,58 +10,58 @@ export class DateTimeFormatter extends Enum<string> {
   /**
    * ### e.g. `2022-02-02 22:22:22`
    */
-  static readonly FULL_DATE_TIME = DateTimeFormatter.key('YYYY-MM-DD HH:mm:ss')
+  static readonly FULL_DATE_TIME = new DateTimeFormatter('YYYY-MM-DD HH:mm:ss')
 
   /**
    * ### e.g. `15061231312312`
    * 毫秒时间戳
    */
-  static readonly TIMESTAMP = DateTimeFormatter.key('x')
+  static readonly TIMESTAMP = new DateTimeFormatter('x')
 
   /**
    * ### e.g. `02-02 22:22`
    */
-  static readonly SHORT_DATE_TIME = DateTimeFormatter.key('MM-DD HH:mm')
+  static readonly SHORT_DATE_TIME = new DateTimeFormatter('MM-DD HH:mm')
 
   /**
    * ### e.g. `2022-02-02`
    */
-  static readonly FULL_DATE = DateTimeFormatter.key('YYYY-MM-DD')
+  static readonly FULL_DATE = new DateTimeFormatter('YYYY-MM-DD')
 
   /**
    * ### e.g. `22:22:22`
    */
-  static readonly FULL_TIME = DateTimeFormatter.key('HH:mm:ss')
+  static readonly FULL_TIME = new DateTimeFormatter('HH:mm:ss')
 
   /**
    * ### e.g. `2022`
    */
-  static readonly YEAR = DateTimeFormatter.key('YYYY')
+  static readonly YEAR = new DateTimeFormatter('YYYY')
 
   /**
    * ### e.g. `02`
    */
-  static readonly MONTH = DateTimeFormatter.key('MM')
+  static readonly MONTH = new DateTimeFormatter('MM')
 
   /**
    * ### e.g. `02`
    */
-  static readonly DAY = DateTimeFormatter.key('DD')
+  static readonly DAY = new DateTimeFormatter('DD')
 
   /**
    * ### e.g. `22`
    */
-  static readonly HOUR = DateTimeFormatter.key('HH')
+  static readonly HOUR = new DateTimeFormatter('HH')
 
   /**
    * ### e.g. `22`
    */
-  static readonly MINUTE = DateTimeFormatter.key('mm')
+  static readonly MINUTE = new DateTimeFormatter('mm')
 
   /**
    * ### e.g. `59`
    */
-  static readonly SECOND = DateTimeFormatter.key('ss')
+  static readonly SECOND = new DateTimeFormatter('ss')
 
   /**
    * ### 使用这个模板格式化毫秒时间戳
