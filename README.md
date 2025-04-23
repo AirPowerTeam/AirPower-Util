@@ -15,11 +15,11 @@
 ## 💻 如何安装
 
 ```shell
-npm install @airpower/crypto
+npm install @airpower/util
 # or
-yarn add @airpower/crypto
+yarn add @airpower/util
 # or
-cnpm install @airpower/crypto
+cnpm install @airpower/util
 # or ...
 ```
 
