@@ -77,12 +77,12 @@ export class DesensitizeUtil {
   public static desensitize(
     source: string,
     type: DesensitizeType,
-    head = 0,
-    tail = 0,
-    symbol = this.DEFAULT_MASK,
+        head = 0,
+        tail = 0,
+        symbol = this.DEFAULT_MASK,
   ): string {
     if (!source) {
-      throw new Error('Source is required!')
+      return symbol
     }
     head = head <= 0 ? type.head : head
     tail = tail <= 0 ? type.tail : tail
