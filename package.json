@@ -40,12 +40,12 @@
     "preview": "vite preview"
   },
   "peerDependencies": {
-    "@airpower/enum": "^0.0.9",
+    "@airpower/enum": "^0.0.10",
     "@types/crypto-js": "^4.2.2",
     "crypto-js": "^4.2.0"
   },
   "dependencies": {
-    "@airpower/enum": "^0.0.9",
+    "@airpower/enum": "^0.0.10",
     "@types/crypto-js": "^4.2.2",
     "crypto-js": "^4.2.0"
   },
