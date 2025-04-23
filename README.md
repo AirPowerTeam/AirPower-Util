@@ -12,6 +12,10 @@
 
 **AirPower-Util** 是一个基于 TypeScript 的开发工具包, 内置了日常开发中的常用工具。
 
+## 🚗 项目依赖
+
+- **[AirPower-Enum](https://github.com/AirPowerTeam/AirPower-Enum)**
+
 ## 💻 如何安装
 
 ```shell
