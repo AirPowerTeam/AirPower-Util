@@ -2,7 +2,7 @@ import { Enum } from '@airpower/enum'
 import { DesensitizeUtil } from './DesensitizeUtil'
 
 /**
- * # 脱敏类型
+ * ### 脱敏类型
  *
  * @author Hamm.cn
  */

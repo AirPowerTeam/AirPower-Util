@@ -1,7 +1,7 @@
 import { DesensitizeType } from './DesensitizeType'
 
 /**
- * # 脱敏助手类
+ * ### 脱敏助手类
  *
  * @author Hamm.cn
  */

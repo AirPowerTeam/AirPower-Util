@@ -2,7 +2,7 @@ import { Enum } from '@airpower/enum'
 import { DateTimeUtil } from './DateTimeUtil'
 
 /**
- * # 标准时间格式化
+ * ### 标准时间格式化
  *
  * @author Hamm.cn
  */

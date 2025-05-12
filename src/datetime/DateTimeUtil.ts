@@ -1,7 +1,7 @@
 import { DateTimeFormatter } from './DateTimeFormatter'
 
 /**
- * # 时间日期时间戳格式化类
+ * ### 时间日期时间戳格式化类
  *
  * @author Hamm.cn
  */

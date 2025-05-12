@@ -1,7 +1,7 @@
 import CryptoJS from 'crypto-js'
 
 /**
- * # 加解密和散列摘要算法工具类
+ * ### 加解密和散列摘要算法工具类
  *
  * @author Hamm.cn
  */
@@ -72,7 +72,7 @@ export class CryptoUtil {
   }
 
   /**
-   * # Base64编码
+   * ### Base64编码
    * @param data
    */
   static base64Encode(data: string): string {
@@ -80,7 +80,7 @@ export class CryptoUtil {
   }
 
   /**
-   * # Base64解码
+   * ### Base64解码
    * @param data
    */
   static base64Decode(data: string): string {
