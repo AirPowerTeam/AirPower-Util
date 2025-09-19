@@ -12,6 +12,6 @@ export default config({
     },
   },
   gitignore: false,
-  ignores: ['dist', '.idea', '.vscode'],
+  ignores: ['dist', '.idea', '.vscode', 'docs'],
   vue: false,
 })

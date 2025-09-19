@@ -29,27 +29,16 @@ cnpm install @airpower/util
 
 ## 📖 参考文档
 
-你可以安装之后，输入相关的 Util 类名，直接选择方法即可查看到文档。
-
-- `DateTimeUtil` 时间日期工具
-
-- `DateTimeFormatter` 时间格式化模板
-
-- `DesensitizeType` 脱敏类型
-
-- `DesensitizeUtil` 脱敏工具
-
-- `StringUtil` 字符串工具
-
-- `FileUtil` 文件工具
-
-- `RandomUtil` 随机工具
-
-- `ValidateUtil` 验证工具
-
-- `CryptoUtil` 加解密编解码工具
-
-- `VersionUtil` 版本号工具
+- [加解密工具类](./docs/CryptoUtil.md)
+- [日期模板](./docs/DateTimeFormatter.md)
+- [日期格式化工具类](./docs/DateTimeUtil.md)
+- [脱敏类型](./docs/DesensitizeType.md)
+- [脱敏工具类](./docs/DesensitizeUtil.md)
+- [文件工具类](./docs/FileUtil.md)
+- [随机数工具类](./docs/RandomUtil.md)
+- [字符串处理工具类](./docs/StringUtil.md)
+- [验证工具类](./docs/ValidateUtil.md)
+- [版本号工具类](./docs/VersionUtil.md)
 
 ## ⏰ 欢迎反馈
 
