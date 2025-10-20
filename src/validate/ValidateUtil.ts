@@ -8,7 +8,7 @@ export class ValidateUtil {
   /**
    * ### 十进制
    */
-  private static readonly DECIMALISM = 10
+  private static readonly DECIMALISM: number = 10
 
   /**
    * ### 验证是否手机号或座机号
@@ -124,20 +124,20 @@ export class ValidateUtil {
       return false
     }
 
-    const year = Number.parseInt(str.substring(6), this.DECIMALISM)
+    const year: number = Number.parseInt(str.substring(6), this.DECIMALISM)
     if (year > new Date().getFullYear() || year < 1900) {
       return false
     }
-    const month = Number.parseInt(str.substring(10, 12), this.DECIMALISM)
+    const month: number = Number.parseInt(str.substring(10, 12), this.DECIMALISM)
     if (month > 12 || month < 1) {
       return false
     }
-    const day = Number.parseInt(str.substring(12, 14), this.DECIMALISM)
+    const day: number = Number.parseInt(str.substring(12, 14), this.DECIMALISM)
     if (day > 31 || month < 1) {
       return false
     }
-    let sum = 0
-    for (let i = 0; i < 17; i += 1) {
+    let sum: number = 0
+    for (let i: number = 0; i < 17; i += 1) {
       sum += Number.parseInt(str[i], this.DECIMALISM) * (validArray[0][i] as number)
     }
 

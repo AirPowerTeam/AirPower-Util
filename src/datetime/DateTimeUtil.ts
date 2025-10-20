@@ -9,62 +9,62 @@ export class DateTimeUtil {
   /**
    * ### 时间进制
    */
-  static readonly SECOND_PER_MINUTE = 60
+  static readonly SECOND_PER_MINUTE: number = 60
 
   /**
    * ### 每小时的秒数
    */
-  static readonly SECOND_PER_HOUR = this.SECOND_PER_MINUTE ** 2
+  static readonly SECOND_PER_HOUR: number = this.SECOND_PER_MINUTE ** 2
 
   /**
    * ### 每秒的毫秒数
    */
-  static readonly MILLISECONDS_PER_SECOND = 1000
+  static readonly MILLISECONDS_PER_SECOND: number = 1000
 
   /**
    * ### 每天小时
    */
-  static readonly HOUR_PER_DAY = 24
+  static readonly HOUR_PER_DAY: number = 24
 
   /**
    * ### 每月天数
    */
-  static readonly DAY_PER_MONTH = 30
+  static readonly DAY_PER_MONTH: number = 30
 
   /**
    * ### 每年月份
    */
-  static readonly MONTH_PER_YEAR = 12
+  static readonly MONTH_PER_YEAR: number = 12
 
   /**
    * ### 每年天数
    */
-  static readonly DAY_PER_YEAR = 365
+  static readonly DAY_PER_YEAR: number = 365
 
   /**
    * ### 每天秒数
    */
-  static readonly SECOND_PER_DAY = this.SECOND_PER_HOUR * this.HOUR_PER_DAY
+  static readonly SECOND_PER_DAY: number = this.SECOND_PER_HOUR * this.HOUR_PER_DAY
 
   /**
    * ### 每周天数
    */
-  static readonly DAY_PER_WEEK = 7
+  static readonly DAY_PER_WEEK: number = 7
 
   /**
    * ### 每年平均周
    */
-  static readonly WEEK_PER_YEAR = 52
+  static readonly WEEK_PER_YEAR: number = 52
 
   /**
    * ### 每月平均周
    */
-  static readonly WEEK_PER_MONTH = 4
+  static readonly WEEK_PER_MONTH: number = 4
 
   /**
    * ### 每天秒数
    */
-  static readonly SECONDS_PER_DAY = this.HOUR_PER_DAY * this.SECOND_PER_HOUR
+  static readonly SECONDS_PER_DAY: number = this.HOUR_PER_DAY * this.SECOND_PER_HOUR
 
   /**
    * ### 睡会再起来干活
@@ -72,8 +72,8 @@ export class DateTimeUtil {
    * @param milliSeconds 毫秒数
    */
   static async sleep(milliSeconds: number): Promise<void> {
-    return new Promise((success) => {
-      setTimeout(() => {
+    return new Promise((success: () => void): void => {
+      setTimeout((): void => {
         success()
       }, milliSeconds)
     })
@@ -160,9 +160,9 @@ export class DateTimeUtil {
     else {
       timestamp = this.getUnixTimeStamps(date)
     }
-    const diff = Math.abs(currentTimestamp - timestamp)
+    const diff: number = Math.abs(currentTimestamp - timestamp)
 
-    const suffix = timestamp > currentTimestamp ? '后' : '前'
+    const suffix: '前' | '后' = timestamp > currentTimestamp ? '后' : '前'
 
     const steps: Array<{ key: number, label: string }> = [
       {
@@ -194,8 +194,8 @@ export class DateTimeUtil {
         label: '年',
       },
     ]
-    for (let i = steps.length - 1; i >= 0; i -= 1) {
-      const step = steps[i]
+    for (let i: number = steps.length - 1; i >= 0; i -= 1) {
+      const step: { key: number, label: string } = steps[i]
       if (timestamp <= currentTimestamp && diff < this.SECOND_PER_MINUTE) {
         // 过去时间，且小于60s
         return '刚刚'

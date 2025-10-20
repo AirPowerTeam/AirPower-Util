@@ -7,15 +7,15 @@ export class StringUtil {
   /**
    * ### 单码元长度
    */
-  private static SINGLE_POINT_LENGTH = 65535
+  private static SINGLE_POINT_LENGTH: number = 65535
 
   /**
    * ### 获取字符串可视化长度
    */
   static getLength(str: string): number {
-    let len = 0
-    for (let i = 0; i < str.length;) {
-      const codePoint = str.codePointAt(i)!
+    let len: number = 0
+    for (let i: number = 0; i < str.length;) {
+      const codePoint: number = str.codePointAt(i)!
       i += codePoint > this.SINGLE_POINT_LENGTH ? 2 : 1
       len += 1
     }
@@ -29,12 +29,12 @@ export class StringUtil {
    * @returns 字符串
    */
   static get(str: string, index: number): string {
-    let current = 0
+    let current: number = 0
     if (index < 0) {
       throw new Error('AirString.get() Error: index error')
     }
-    for (let i = 0; i < str.length;) {
-      const codePoint = str.codePointAt(i)!
+    for (let i: number = 0; i < str.length;) {
+      const codePoint: number = str.codePointAt(i)!
       if (current === index) {
         return String.fromCodePoint(codePoint)
       }
@@ -50,7 +50,7 @@ export class StringUtil {
    * @param from 截取开始位置
    * @param to 截取结束位置
    */
-  static slice(str: string, from = 0, to = this.getLength(str) - 1): string {
+  static slice(str: string, from: number = 0, to: number = this.getLength(str) - 1): string {
     if (from < 0) {
       throw new Error('Error: from error')
     }
@@ -63,8 +63,8 @@ export class StringUtil {
     if (to > this.getLength(str) - 1) {
       throw new Error('Error: to out of range')
     }
-    let s = ''
-    for (let i = from; i <= to; i += 1) {
+    let s: string = ''
+    for (let i: number = from; i <= to; i += 1) {
       s += this.get(str, i)
     }
     return s

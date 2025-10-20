@@ -9,17 +9,17 @@ export class DesensitizeUtil {
   /**
    * ### 默认的脱敏符号
    */
-  private static DEFAULT_MASK = '*'
+  private static DEFAULT_MASK: string = '*'
 
   /**
    * ### IP地址分隔符
    */
-  private static readonly IP_V4_SEPARATOR = '.'
+  private static readonly IP_V4_SEPARATOR: string = '.'
 
   /**
    * ### `IPv4` 的块长度
    */
-  private static readonly IP_V4_PART_COUNT = 4
+  private static readonly IP_V4_PART_COUNT: number = 4
 
   /**
    * ### 字符串替换
@@ -34,8 +34,8 @@ export class DesensitizeUtil {
     if (head < 0 || tail < 0 || head + tail >= text.length) {
       return text
     }
-    let str = ''
-    for (let i = 0; i < text.length; i += 1) {
+    let str: string = ''
+    for (let i: number = 0; i < text.length; i += 1) {
       if (i >= head && i <= text.length - tail - 1) {
         str += symbol
       }
@@ -54,11 +54,11 @@ export class DesensitizeUtil {
    * @return 脱敏后的 `IPv4` 地址
    */
   public static desensitizeIpv4Address(ipv4: string, symbol = this.DEFAULT_MASK): string {
-    const strings = ipv4.split(this.IP_V4_SEPARATOR)
+    const strings: string[] = ipv4.split(this.IP_V4_SEPARATOR)
     if (strings.length !== DesensitizeUtil.IP_V4_PART_COUNT) {
       return ipv4
     }
-    const temp = symbol + symbol + symbol
+    const temp: string = symbol + symbol + symbol
     strings[1] = temp
     strings[2] = temp
     return strings.join(this.IP_V4_SEPARATOR)
@@ -77,9 +77,9 @@ export class DesensitizeUtil {
   public static desensitize(
     source: string,
     type: DesensitizeType,
-        head = 0,
-        tail = 0,
-        symbol = this.DEFAULT_MASK,
+    head = 0,
+    tail = 0,
+    symbol: string = this.DEFAULT_MASK,
   ): string {
     if (!source) {
       return symbol
@@ -97,7 +97,7 @@ export class DesensitizeUtil {
       case DesensitizeType.TELEPHONE.key:
         // 包含区号 前后各留4 不包含则各留2
         // eslint-disable-next-line no-case-declarations
-        const isContainRegionCode = source.length > 8 ? 4 : 2
+        const isContainRegionCode: 4 | 2 = source.length > 8 ? 4 : 2
         head = isContainRegionCode
         tail = isContainRegionCode
         break
