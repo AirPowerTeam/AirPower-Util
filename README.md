@@ -3,6 +3,15 @@
 </p>
 
 <p align="center">
+<a href="https://www.npmjs.com/@airpower/util">
+<img src="https://img.shields.io/npm/v/@airpower/util"/>
+</a>
+<a href="https://www.npmjs.com/@airpower/util">
+<img src="https://img.shields.io/npm/dm/@airpower/util"/>
+</a>
+</p>
+
+<p align="center">
 <a href="https://github.com/AirPowerTeam/AirPower-Util">Github</a> /
 <a href="https://gitee.com/air-power/AirPower-Util">Gitee</a> /
 <a href="https://www.npmjs.com/package/@airpower/util">NPM</a>
