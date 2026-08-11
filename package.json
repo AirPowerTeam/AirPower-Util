@@ -1,7 +1,7 @@
 {
   "name": "@airpower/util",
   "type": "module",
-  "version": "2.9.0",
+  "version": "4.0.0",
   "description": "AirPower-Util 是一个基于 TypeScript 的开发工具包, 内置了日常开发中的常用工具。",
   "author": {
     "name": "Hamm",
@@ -38,22 +38,22 @@
     "build": "eslint && tsc && vite build"
   },
   "peerDependencies": {
-    "@airpower/enum": "^2.9.0",
+    "@airpower/enum": "^4.0.0",
     "@types/crypto-js": "^4.2.2",
     "crypto-js": "^4.2.0"
   },
   "dependencies": {
-    "@airpower/enum": "^2.9.0",
+    "@airpower/enum": "^4.0.0",
     "@types/crypto-js": "^4.2.2",
     "crypto-js": "^4.2.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^6.2.0",
-    "@types/node": "^24.10.0",
-    "eslint": "^9.39.1",
-    "typescript": "^5.9.3",
-    "vite": "7.2.2",
-    "vite-plugin-dts": "^4.5.4"
+    "@antfu/eslint-config": "^9.3.0",
+    "@types/node": "^26.2.0",
+    "eslint": "^10.8.1",
+    "typescript": "^6.0.3",
+    "vite": "8.0.16",
+    "vite-plugin-dts": "^5.0.3"
   },
   "publishConfig": {
     "access": "public"
